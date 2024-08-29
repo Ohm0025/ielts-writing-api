@@ -1,5 +1,4 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
-
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 require("dotenv").config();
 
 const geminiRun = async (promt) => {
