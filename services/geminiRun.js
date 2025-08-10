@@ -5,7 +5,7 @@ dotenv.config();
 
 const api_key = process.env.API_KEY;
 
-const genAI = new GoogleGenAI(api_key);
+const genAI = new GoogleGenAI({apiKey: api_key });
 
 const geminiRun = async (promt) => {
 
