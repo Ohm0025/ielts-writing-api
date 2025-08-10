@@ -8,11 +8,13 @@ const api_key = process.env.API_KEY;
 const genAI = new GoogleGenAI(api_key);
 
 const geminiRun = async (promt) => {
-  const result = await genAI.models.generateContent({
+
+  const response = await genAI.models.generateContent({
     model: "gemini-2.5-flash",
     contents: promt,
   });
-  const text = result.text();
+  const text = response.text;
+
   return text;
 };
 
